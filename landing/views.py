@@ -22,7 +22,7 @@ class GeoPointView(View):
 
     def get(self, request):
         geo_points = get_geo_points()
-        return JsonResponse({"geo_points": geo_points}, status=200, safe=False)
+        return JsonResponse({'type': 'FeatureCollection', "features": geo_points}, status=200, safe=False)
 
 
 class OrganizationDetail(View):

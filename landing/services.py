@@ -30,9 +30,13 @@ def get_geo_points() -> list:
                                      'last_name': profile.last_name,
                                      'patronymic': profile.patronymic,
                                      'organization': ""})
+        geometry = {'type': 'Point', 'coordinates': [point.latitude, point.longitude]}
+        options = {'iconColor': '#ff0000', 'preset': 'islands#blueCircleIcon'}
+        data = {'organizations': organization_list,'profile_list': profile_list}
 
-        points.append({'id': point.id, 'name': point.name, 'district': point.district,
-                       'latitude': point.latitude, 'longitude': point.longitude,
-                       'organizations': organization_list, 'profile_list': profile_list})
+        quantity = len(profile_list) + len(organization_list)
+
+        points.append({'type':  'Feature', 'id': point.id, 'geometry': geometry,
+                       'properties': {'data': data, 'iconContent': quantity}, 'options': options})
 
     return points

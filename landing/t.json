@@ -1,0 +1,19 @@
+{
+  type: 'FeatureCollection',
+  features: [
+    { type: 'Feature',
+      id: 1,
+      geometry: {type: 'Point', coordinates: [53.346785, 83.776856]},
+      properties:
+        { data:
+          { organizations: [
+            { id: 1, name: 'Наименование Организации Барнаул 1' },
+            { id: 2, name: 'Наименование Организации Барнаул 2' } ],
+            profile_list: [
+              { id: 1, first_name: 'Натан', last_name: 'Маслов', patronymic: 'Митрофанович', organization: '' },
+              { id: 2, first_name: 'Вадим', last_name: 'Ситников', patronymic: 'Наумович', organization: 'Наименование Организации Барнаул 1' } ] },
+          iconContent: 'Количество сотрудников и организаций' },
+      options: { iconColor: '#ff0000', preset: 'islands#blueCircleIcon' }
+    }
+  ]
+}
