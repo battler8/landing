@@ -31,7 +31,7 @@ def get_geo_points() -> list:
                                      'patronymic': profile.patronymic,
                                      'organization': ""})
         geometry = {'type': 'Point', 'coordinates': [point.latitude, point.longitude]}
-        options = {'iconColor': '#ff0000', 'preset': 'islands#blueCircleIcon'}
+        options = {'preset': 'islands#redCircleIcon'}
         data = {'organizations': organization_list,'profile_list': profile_list}
 
         quantity = len(profile_list) + len(organization_list)

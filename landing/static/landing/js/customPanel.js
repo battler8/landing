@@ -1,20 +1,13 @@
 document.getElementById('defaultOpen').click()
-
-function closeMenu() {
-	document.getElementById('customPanel').style.display = 'none'
-}
-function openMenu() {
-	document.getElementById('customPanel').style.display = 'block'
-}
 document.getElementById('togglePanel').addEventListener('click', () => {
 	document.getElementById('customPanel').classList.toggle('close-panel')
-	if (
-		document.getElementById('toggle-icon').className == 'bi bi-caret-left'
-	) {
-		document.getElementById('toggle-icon').className = 'bi bi-caret-right'
-	} else {
-		document.getElementById('toggle-icon').className = 'bi bi-caret-left'
-	}
+	document.querySelector('.map-wrapper').classList.remove('change-height')
+
+	const yOffset = -100
+		const y =
+		document.getElementById('map').getBoundingClientRect().top + window.pageYOffset + yOffset
+
+		window.scrollTo({top: y, behavior: 'smooth'})
 })
 
 function openTab(evt, contentName) {

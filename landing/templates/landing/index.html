@@ -270,23 +270,28 @@
       <div class="row">
 
         <div class="map-wrapper">
+          <div class="loader">
+            <div class="panel-loader"></div>
+          </div>
           <div id="map"></div>
           <div id="customPanel" class="custom-panel close-panel">
 
             <div class="tab">
 
-              <div id="togglePanel" class="toggle-panel"><i id="toggle-icon" class="bi bi-caret-left"></i></div>
-              <button class="tablinks" onclick="openTab(event, 'organizations')" id="defaultOpen">Организации
-                <span id="org-quantity" class="panel-quantity"></span></button>
-              <button class="tablinks" onclick="openTab(event, 'profiles')">Сотрудники
-                <span id="prof-quantity" class="panel-quantity"></span></button>
+              <div class="buttons"><button class="tablinks" onclick="openTab(event, 'organizations')"
+                  id="defaultOpen"><i class="bi bi-check2-circle"></i></button>
+                <button class="tablinks" onclick="openTab(event, 'profiles')"><i class="bi bi-map"></i></button></div>
+              <div id="togglePanel" class="toggle-panel"><i class="bi bi-x"></i></div>
+
             </div>
             <div class="panel-content">
-              <ul id="organizations" class="tabcontent ul-panel">
-                <div class="panel-loader"></div>
-              </ul>
+              <div id="organizations" class="tabcontent ul-panel">
+                <h3 class="content-heading">Организации<span id="org-quantity" class="panel-quantity"></span></h3>
+                <div id="organizations-content"></div>
+              </div>
               <ul id="profiles" class="tabcontent ul-panel">
-                <div class="panel-loader"></div>
+                <h3 class="content-heading">Сотрудники<span id="prof-quantity" class="panel-quantity"></span></h3>
+                <div id="profiles-content"></div>
               </ul>
             </div>
           </div>
