@@ -31,6 +31,12 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'landing/css/style.css'%}" rel="stylesheet">
 
+    <!-- Map CSS File -->
+    <link href="{% static 'landing/css/map.css'%}" rel="stylesheet">
+
+    <!-- Yandex Map Api -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=514d53c2-e5ae-46ce-aab1-0f53060406f8&lang=ru_RU" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -46,7 +52,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Главная</a></li>
-          <li><a class="nav-link scrollto" href="#map">Карта</a></li>
+          <li><a class="nav-link scrollto" href="#yandexMap">Карта</a></li>
           <li><a class="nav-link scrollto " href="#news">Новости</a></li>
           <li><a class="nav-link scrollto" href="#team">Команда</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
@@ -104,6 +110,11 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
   <!-- Vendor JS Files -->
   <script src="{% static 'landing/vendor/aos/aos.js'%}"></script>
   <script src="{% static 'landing/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
@@ -114,6 +125,12 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'landing/js/main.js'%}"></script>
+
+  <!-- Yandex Map JS File  -->
+  <script src="{% static 'landing/js/yandexMap.js'%}"></script>
+
+  <!-- Custom Panel JS File  -->
+  <script src="{% static 'landing/js/customPanel.js'%}"></script>
 
 </body>
 
